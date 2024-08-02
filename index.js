@@ -17,32 +17,14 @@ let customValue3 = process.argv[2];
 let customValue4 = process.argv[3];
 
 if (customValue3 === 'generate-random-object') {
-    //console.log('customValue3:', `${customValue3}`);
     if(customValue4===undefined){
         console.error('Expected output file path!');
         process.exit(1);
     }
     randomObjects = randomObjectGenerator.generateRandomObjects(10000000, customValue4); // 10MB output size
-    //console.log(randomObjects);
 } else if (customValue3 === 'run-object-sorter') {
-    objectSorter.runService("data/in/", "data/out/output-sorter.txt");
+    objectSorter.runService("data/in/", "data/out/output.txt");
 } else{
     console.error('Valid command: generate-random-object or run-object-sorter');
     process.exit(1);
 }
-
-
-/*
-program
-    .command('generate-random-object')
-    .description('Generate random objects')
-    .action(randomObjectGenerator.generateRandomObjects)
-
-program
-    .command('run-object-sorter')
-    .description('Run object sorter service')
-    .action(objectSorter.runService)
-
-
-program.parse()
-*/

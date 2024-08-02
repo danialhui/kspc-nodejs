@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf ./data 
+rm -rf ./data  ./node_modules
 
-#docker rmi --force sorter-object-app
+docker rmi --force sorter-object-app
 

@@ -2,7 +2,7 @@
 
 mkdir -p data/in
 mkdir -p data/out
-
+npm install
 # npm start run-object-sorter 
 # npm start generate-random-object
 # mkdir bin
