@@ -2,35 +2,35 @@
 
 
 ## Challenge A
-**Write a program that will generate four (4) types of printable random objects and store them in a single file, each object will be separated by a ",". These are the 4 objects: alphabetical strings, real numbers, integers, alphanumerics. The alphanumerics should contain a random number of spaces before and after it (not exceeding 10 spaces). The output should be 10MB in size.**
+***Write a program that will generate four (4) types of printable random objects and store them in a single file, each object will be separated by a ",". These are the 4 objects: alphabetical strings, real numbers, integers, alphanumerics. The alphanumerics should contain a random number of spaces before and after it (not exceeding 10 spaces). The output should be 10MB in size.***
 
 
-**Answer:** 
+### Answer: 
 [randomObjectGenerator.js](https://github.com/danialhui/kspc-nodejs/blob/main/service/randomObjectGenerator.js)
 
 The entry point of the program at [index.js](https://github.com/danialhui/kspc-nodejs/blob/main/index.js). It can be access using command `npm start generate-random-object`
 
 ## Challenge B
-**Create a program that will read the generated file above and print to the console the object and its type. Spaces before and after the alphanumeric object must be stripped.**
+***Create a program that will read the generated file above and print to the console the object and its type. Spaces before and after the alphanumeric object must be stripped.***
 
 
-**Answer:** 
+### Answer: 
 [objectSorter.js](https://github.com/danialhui/kspc-nodejs/blob/main/service/objectSorter.js)
 
 The entry point of the program at [index.js](https://github.com/danialhui/kspc-nodejs/blob/main/index.js). It can be access using command `npm start run-object-sorter `
 
 ## Challenge C
-**Dockerize Challenge B. Write a docker file so that it reads the output from Challenge A as an Input. Once this container is started, the program in challenge B is executed to process this file. The output should be saved in a file and should be exposed to the Docker host machine.**
+***Dockerize Challenge B. Write a docker file so that it reads the output from Challenge A as an Input. Once this container is started, the program in challenge B is executed to process this file. The output should be saved in a file and should be exposed to the Docker host machine.***
 
 
-**Answer:** 
+### Answer: 
 
 [Dockerfile](https://github.com/danialhui/kspc-nodejs/blob/main/Dockerfile)
 
 
 ---
 
-### Build and Deploy
+## Build and Deploy
 To build and deploy the program, execute
 ```
 sh 1_run.sh
@@ -43,7 +43,7 @@ sh 1_run.sh
 
 
 
-### Generate Input
+## Generate Input
 ObjectSorter is watching `data/in` directoty, to generate input, execute
 ```
 sh 2_generateObjects.sh
@@ -58,7 +58,7 @@ npm start generate-random-object data/in/data_$(date "+%Y%m%d%H%M%S").txt
 
 
 
-### Cleanup
+## Cleanup
 To clean up, execute
 
 ```
