@@ -21,6 +21,8 @@ The entry point of the program at [index.js](https://github.com/danialhui/kspc-n
 
 The entry point of the program at [index.js](https://github.com/danialhui/kspc-nodejs/blob/main/index.js). It can be access using command `npm start run-object-sorter `
 
+`node-watch` was use for file watch on the input directory over `fs.watch` because `fs.watch` having problem on triggering same event multiple times and cause same file was processed more than once.
+
 ## Challenge C
 ***Dockerize Challenge B. Write a docker file so that it reads the output from Challenge A as an Input. Once this container is started, the program in challenge B is executed to process this file. The output should be saved in a file and should be exposed to the Docker host machine.***
 
